@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		49A19B8C1E6E4846009BFC6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A19B8B1E6E4846009BFC6B /* AppDelegate.swift */; };
-		49A19B8E1E6E4846009BFC6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A19B8D1E6E4846009BFC6B /* ViewController.swift */; };
 		49A19B911E6E4846009BFC6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A19B8F1E6E4846009BFC6B /* Main.storyboard */; };
 		49A19B931E6E4846009BFC6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49A19B921E6E4846009BFC6B /* Assets.xcassets */; };
 		49A19B961E6E4846009BFC6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A19B941E6E4846009BFC6B /* LaunchScreen.storyboard */; };
+		49A19B9F1E6E48FD009BFC6B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A19B9E1E6E48FD009BFC6B /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		49A19B881E6E4846009BFC6B /* Sleep Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sleep Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A19B8B1E6E4846009BFC6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		49A19B8D1E6E4846009BFC6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		49A19B901E6E4846009BFC6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49A19B921E6E4846009BFC6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49A19B951E6E4846009BFC6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49A19B971E6E4846009BFC6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49A19B9E1E6E48FD009BFC6B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +54,22 @@
 		49A19B8A1E6E4846009BFC6B /* Sleep Remote */ = {
 			isa = PBXGroup;
 			children = (
+				49A19B9D1E6E48EA009BFC6B /* Controllers */,
 				49A19B8B1E6E4846009BFC6B /* AppDelegate.swift */,
-				49A19B8D1E6E4846009BFC6B /* ViewController.swift */,
 				49A19B8F1E6E4846009BFC6B /* Main.storyboard */,
 				49A19B921E6E4846009BFC6B /* Assets.xcassets */,
 				49A19B941E6E4846009BFC6B /* LaunchScreen.storyboard */,
 				49A19B971E6E4846009BFC6B /* Info.plist */,
 			);
 			path = "Sleep Remote";
+			sourceTree = "<group>";
+		};
+		49A19B9D1E6E48EA009BFC6B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				49A19B9E1E6E48FD009BFC6B /* MainViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +104,7 @@
 				TargetAttributes = {
 					49A19B871E6E4846009BFC6B = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 8PG23KL22X;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -136,8 +145,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49A19B8E1E6E4846009BFC6B /* ViewController.swift in Sources */,
 				49A19B8C1E6E4846009BFC6B /* AppDelegate.swift in Sources */,
+				49A19B9F1E6E48FD009BFC6B /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +269,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8PG23KL22X;
 				INFOPLIST_FILE = "Sleep Remote/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bergcode.Sleep-Remote";
@@ -272,6 +282,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8PG23KL22X;
 				INFOPLIST_FILE = "Sleep Remote/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bergcode.Sleep-Remote";
