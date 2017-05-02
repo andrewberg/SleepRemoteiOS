@@ -7,14 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48E54110DEDD60A674233692 /* Pods_Sleep_Remote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB8C1D9172338097161D2AB /* Pods_Sleep_Remote.framework */; };
 		49A19B8C1E6E4846009BFC6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A19B8B1E6E4846009BFC6B /* AppDelegate.swift */; };
 		49A19B911E6E4846009BFC6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A19B8F1E6E4846009BFC6B /* Main.storyboard */; };
 		49A19B931E6E4846009BFC6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49A19B921E6E4846009BFC6B /* Assets.xcassets */; };
 		49A19B961E6E4846009BFC6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A19B941E6E4846009BFC6B /* LaunchScreen.storyboard */; };
 		49A19B9F1E6E48FD009BFC6B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A19B9E1E6E48FD009BFC6B /* MainViewController.swift */; };
+		49B6F7901EB77A0F00099956 /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B6F78F1EB77A0F00099956 /* setting.png */; };
+		49B6F7931EB77BAC00099956 /* spanner-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B6F7921EB77BAC00099956 /* spanner-7.png */; };
+		49B6F7951EB77C2F00099956 /* clock-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B6F7941EB77C2F00099956 /* clock-7.png */; };
+		49B6F7971EB780D500099956 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B6F7961EB780D500099956 /* SettingsTableViewController.swift */; };
+		49B6F79A1EB78A1100099956 /* TimePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B6F7991EB78A1100099956 /* TimePickerViewController.swift */; };
+		49B6F79C1EB79D2200099956 /* ConnectionTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B6F79B1EB79D2200099956 /* ConnectionTestViewController.swift */; };
+		49B6F79E1EB7A30000099956 /* TestSignalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B6F79D1EB7A30000099956 /* TestSignalViewController.swift */; };
+		49B6F7A01EB7AA8200099956 /* CalibrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B6F79F1EB7AA8200099956 /* CalibrationViewController.swift */; };
+		49B6F7A21EB7C60700099956 /* RemoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B6F7A11EB7C60700099956 /* RemoteViewController.swift */; };
+		49B6F7A41EB7C95500099956 /* RunningClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B6F7A31EB7C95500099956 /* RunningClockViewController.swift */; };
+		49B6F7A61EB7D03300099956 /* video-player-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B6F7A51EB7D03300099956 /* video-player-7.png */; };
+		49B6F7A81EB7D56A00099956 /* ShowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B6F7A71EB7D56A00099956 /* ShowsViewController.swift */; };
+		49B6F7AA1EB7D58300099956 /* StatisticsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B6F7A91EB7D58300099956 /* StatisticsTableViewController.swift */; };
+		49B6F7AC1EB7D70E00099956 /* ShowPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B6F7AB1EB7D70E00099956 /* ShowPickerViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		49E3E90D1E6E73700086CC9D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1CB8C1D9172338097161D2AB /* Pods_Sleep_Remote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sleep_Remote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A19B881E6E4846009BFC6B /* Sleep Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sleep Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A19B8B1E6E4846009BFC6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49A19B901E6E4846009BFC6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -22,6 +51,22 @@
 		49A19B951E6E4846009BFC6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49A19B971E6E4846009BFC6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49A19B9E1E6E48FD009BFC6B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		49B6F78F1EB77A0F00099956 /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = setting.png; path = ../../setting.png; sourceTree = "<group>"; };
+		49B6F7921EB77BAC00099956 /* spanner-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "spanner-7.png"; path = "../../../../../../Downloads/iconbeast-lite-200/iconbeast lite 200 - png/spanner-7.png"; sourceTree = "<group>"; };
+		49B6F7941EB77C2F00099956 /* clock-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "clock-7.png"; path = "../../../../../../Downloads/iconbeast-lite-200/iconbeast lite 200 - png/clock-7.png"; sourceTree = "<group>"; };
+		49B6F7961EB780D500099956 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		49B6F7991EB78A1100099956 /* TimePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePickerViewController.swift; sourceTree = "<group>"; };
+		49B6F79B1EB79D2200099956 /* ConnectionTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionTestViewController.swift; sourceTree = "<group>"; };
+		49B6F79D1EB7A30000099956 /* TestSignalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSignalViewController.swift; sourceTree = "<group>"; };
+		49B6F79F1EB7AA8200099956 /* CalibrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalibrationViewController.swift; sourceTree = "<group>"; };
+		49B6F7A11EB7C60700099956 /* RemoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteViewController.swift; sourceTree = "<group>"; };
+		49B6F7A31EB7C95500099956 /* RunningClockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunningClockViewController.swift; sourceTree = "<group>"; };
+		49B6F7A51EB7D03300099956 /* video-player-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "video-player-7.png"; path = "../../../../../../Downloads/iconbeast-lite-200/iconbeast lite 200 - png/video-player-7.png"; sourceTree = "<group>"; };
+		49B6F7A71EB7D56A00099956 /* ShowsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowsViewController.swift; sourceTree = "<group>"; };
+		49B6F7A91EB7D58300099956 /* StatisticsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsTableViewController.swift; sourceTree = "<group>"; };
+		49B6F7AB1EB7D70E00099956 /* ShowPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowPickerViewController.swift; sourceTree = "<group>"; };
+		B029DC68FA249337CE39FC79 /* Pods-Sleep Remote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleep Remote.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sleep Remote/Pods-Sleep Remote.release.xcconfig"; sourceTree = "<group>"; };
+		F0E6F82F094DC37300EB1F6A /* Pods-Sleep Remote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleep Remote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sleep Remote/Pods-Sleep Remote.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +74,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48E54110DEDD60A674233692 /* Pods_Sleep_Remote.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3BB05F896F34BE5AE59C05D4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F0E6F82F094DC37300EB1F6A /* Pods-Sleep Remote.debug.xcconfig */,
+				B029DC68FA249337CE39FC79 /* Pods-Sleep Remote.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		49A19B7F1E6E4846009BFC6B = {
 			isa = PBXGroup;
 			children = (
 				49A19B8A1E6E4846009BFC6B /* Sleep Remote */,
 				49A19B891E6E4846009BFC6B /* Products */,
+				3BB05F896F34BE5AE59C05D4 /* Pods */,
+				FDF5E07D226AF20AFC4466EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +111,7 @@
 		49A19B8A1E6E4846009BFC6B /* Sleep Remote */ = {
 			isa = PBXGroup;
 			children = (
+				49B6F7911EB77A2700099956 /* Images */,
 				49A19B9D1E6E48EA009BFC6B /* Controllers */,
 				49A19B8B1E6E4846009BFC6B /* AppDelegate.swift */,
 				49A19B8F1E6E4846009BFC6B /* Main.storyboard */,
@@ -68,8 +126,37 @@
 			isa = PBXGroup;
 			children = (
 				49A19B9E1E6E48FD009BFC6B /* MainViewController.swift */,
+				49B6F7961EB780D500099956 /* SettingsTableViewController.swift */,
+				49B6F7991EB78A1100099956 /* TimePickerViewController.swift */,
+				49B6F79B1EB79D2200099956 /* ConnectionTestViewController.swift */,
+				49B6F79D1EB7A30000099956 /* TestSignalViewController.swift */,
+				49B6F79F1EB7AA8200099956 /* CalibrationViewController.swift */,
+				49B6F7A11EB7C60700099956 /* RemoteViewController.swift */,
+				49B6F7A31EB7C95500099956 /* RunningClockViewController.swift */,
+				49B6F7A71EB7D56A00099956 /* ShowsViewController.swift */,
+				49B6F7A91EB7D58300099956 /* StatisticsTableViewController.swift */,
+				49B6F7AB1EB7D70E00099956 /* ShowPickerViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		49B6F7911EB77A2700099956 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				49B6F7A51EB7D03300099956 /* video-player-7.png */,
+				49B6F78F1EB77A0F00099956 /* setting.png */,
+				49B6F7941EB77C2F00099956 /* clock-7.png */,
+				49B6F7921EB77BAC00099956 /* spanner-7.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		FDF5E07D226AF20AFC4466EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1CB8C1D9172338097161D2AB /* Pods_Sleep_Remote.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -79,9 +166,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49A19B9A1E6E4846009BFC6B /* Build configuration list for PBXNativeTarget "Sleep Remote" */;
 			buildPhases = (
+				E7D50D565282F14AAAB0E9AF /* [CP] Check Pods Manifest.lock */,
 				49A19B841E6E4846009BFC6B /* Sources */,
 				49A19B851E6E4846009BFC6B /* Frameworks */,
 				49A19B861E6E4846009BFC6B /* Resources */,
+				49E3E90D1E6E73700086CC9D /* Embed Frameworks */,
+				5358792126BAADCEED148A73 /* [CP] Embed Pods Frameworks */,
+				665D753910A30C4E773EEB63 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,21 +223,83 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49B6F7901EB77A0F00099956 /* setting.png in Resources */,
 				49A19B961E6E4846009BFC6B /* LaunchScreen.storyboard in Resources */,
 				49A19B931E6E4846009BFC6B /* Assets.xcassets in Resources */,
 				49A19B911E6E4846009BFC6B /* Main.storyboard in Resources */,
+				49B6F7951EB77C2F00099956 /* clock-7.png in Resources */,
+				49B6F7931EB77BAC00099956 /* spanner-7.png in Resources */,
+				49B6F7A61EB7D03300099956 /* video-player-7.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5358792126BAADCEED148A73 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sleep Remote/Pods-Sleep Remote-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		665D753910A30C4E773EEB63 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sleep Remote/Pods-Sleep Remote-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7D50D565282F14AAAB0E9AF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		49A19B841E6E4846009BFC6B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49B6F7A21EB7C60700099956 /* RemoteViewController.swift in Sources */,
+				49B6F7AA1EB7D58300099956 /* StatisticsTableViewController.swift in Sources */,
+				49B6F7A81EB7D56A00099956 /* ShowsViewController.swift in Sources */,
+				49B6F7A01EB7AA8200099956 /* CalibrationViewController.swift in Sources */,
 				49A19B8C1E6E4846009BFC6B /* AppDelegate.swift in Sources */,
+				49B6F79A1EB78A1100099956 /* TimePickerViewController.swift in Sources */,
+				49B6F7A41EB7C95500099956 /* RunningClockViewController.swift in Sources */,
+				49B6F7AC1EB7D70E00099956 /* ShowPickerViewController.swift in Sources */,
 				49A19B9F1E6E48FD009BFC6B /* MainViewController.swift in Sources */,
+				49B6F7971EB780D500099956 /* SettingsTableViewController.swift in Sources */,
+				49B6F79E1EB7A30000099956 /* TestSignalViewController.swift in Sources */,
+				49B6F79C1EB79D2200099956 /* ConnectionTestViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,7 +420,9 @@
 		};
 		49A19B9B1E6E4846009BFC6B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0E6F82F094DC37300EB1F6A /* Pods-Sleep Remote.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8PG23KL22X;
 				INFOPLIST_FILE = "Sleep Remote/Info.plist";
@@ -280,7 +435,9 @@
 		};
 		49A19B9C1E6E4846009BFC6B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B029DC68FA249337CE39FC79 /* Pods-Sleep Remote.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8PG23KL22X;
 				INFOPLIST_FILE = "Sleep Remote/Info.plist";
@@ -310,6 +467,7 @@
 				49A19B9C1E6E4846009BFC6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

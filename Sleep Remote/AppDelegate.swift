@@ -12,10 +12,17 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    var val: [String] = ["Breaking Bad", "The Office", "Trailer Park Boys"]
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+         let defaults = UserDefaults.standard
+        
+         defaults.set(val, forKey: "shows")
+         defaults.set("The Office", forKey: "lastshow")
+        
         return true
     }
 

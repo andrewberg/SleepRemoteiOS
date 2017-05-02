@@ -9,17 +9,17 @@
 import UIKit
 import CoreMotion
 import AVFoundation
+import Charts
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, ChartViewDelegate {
     var site = "http://10.0.0.201:5000"
     var motionManager = CMMotionManager()
+
+    @IBOutlet weak var chartView: LineChartView!
     
     @IBOutlet weak var xLabel: UILabel!
-    @IBOutlet weak var yLabel: UILabel!
-    @IBOutlet weak var zLabel: UILabel!
     @IBOutlet weak var maxXLabel: UILabel!
-    @IBOutlet weak var maxYLabel: UILabel!
-    @IBOutlet weak var maxZLabel: UILabel!
+
     @IBOutlet weak var thresholdLabel: UILabel!
     @IBOutlet weak var requestLabel: UILabel!
     @IBOutlet weak var averageXLabel: UILabel!
@@ -29,9 +29,10 @@ class MainViewController: UIViewController {
     
     let systemSoundID: SystemSoundID = 1016
 
-    var countdownMax = 60
-    var countdown = 60
-
+    var countdownMax = 600
+    var countdown = 600
+    var countUp = 0
+    
     var timerX = Timer()
     var resetAverageTimer = Timer()
     var countdownTimer = Timer()
@@ -50,7 +51,9 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
 
         thresholdLabel.text = "Current Threshold: \(thresholdSlider.value)"
-        countdownLabel.text = "Countdown till signal: \(countdownMax)"
+        countdownLabel.text = "Countdown till signal: " + convertToMinutes(val: countdownMax)
+        
+        setupChart()
         
         // Do any additional setup after loading the view.
     }
@@ -136,23 +139,18 @@ class MainViewController: UIViewController {
         let a = acc.acceleration
         
         if ((fabs(averageX - a.x) > Double(thresholdSlider.value)) && averageX != 0.0) {
-            AudioServicesPlaySystemSound (systemSoundID)
+            // AudioServicesPlaySystemSound (systemSoundID)
             resetCountdown()
         }
     }
     
     func resetLabels() {
         xLabel.text = "X: 0.0"
-        yLabel.text = "Y: 0.0"
-        zLabel.text = "Z: 0.0"
         
-        maxXLabel.text = "MaxX: 0.0"
-        maxYLabel.text = "MaxY: 0.0"
-        maxZLabel.text = "MaxZ: 0.0"
         
         averageXLabel.text = "AverageX: 0.0"
         
-        countdownLabel.text = "Countdown till signal: \(countdownMax)"
+        countdownLabel.text = "Countdown till signal: " + convertToMinutes(val: countdown)
     }
     
     @IBAction func stopTracking(_ sender: Any) {
@@ -169,29 +167,16 @@ class MainViewController: UIViewController {
         
         resetAverage()
         updateCountdown()
+        
+        countUp = 0
     }
     
     func updateLabels(acc: CMAccelerometerData) {
         xValue = fabs(acc.acceleration.x)
         
         xLabel.text = "X: \(fabs(acc.acceleration.x))"
-        yLabel.text = "Y: \(fabs(acc.acceleration.y))"
-        zLabel.text = "Z: \(fabs(acc.acceleration.z))"
         
-        if (acc.acceleration.x > maxX) {
-           maxXLabel.text = "MaxX: \((fabs(acc.acceleration.x)))"
-            maxX = fabs(acc.acceleration.x)
-        }
-        
-        if (acc.acceleration.y > maxY) {
-            maxYLabel.text = "MaxY: \(fabs(acc.acceleration.y))"
-            maxY = fabs(acc.acceleration.y)
-        }
-        
-        if (acc.acceleration.z > maxZ) {
-            maxZLabel.text = "MaxZ: \(fabs(acc.acceleration.z))"
-            maxZ = fabs(acc.acceleration.z)
-        }
+
         
         averageXLabel.text = "AverageX: \(fabs(averageX))"
         
@@ -216,17 +201,52 @@ class MainViewController: UIViewController {
     
     func updateCountdown() {
         countdown -= 1
+        countUp += 1
         
         if (countdown < 1) {
             countdown = 0
         }
         
-        countdownLabel.text = "Countdown till signal: \(countdown)"
+        countdownLabel.text = "Countdown till signal: " + convertToMinutes(val: countdown)
+        
+        updateChart()
     }
     
     func resetCountdown() {
         countdown = countdownMax
-        countdownLabel.text = "Countdown till signal: \(countdown)"
+        countdownLabel.text = "Countdown till signal: " + convertToMinutes(val: countdown)
+    }
+    
+    func setupChart() {
+        chartView.backgroundColor = UIColor.gray
+        
+        var yVals1 : [ChartDataEntry] = [ChartDataEntry]()
+        yVals1.append(ChartDataEntry(x: Double(0), y: Double(0)))
+        
+        
+        // 2 - create a data set with our array
+        let set1: LineChartDataSet = LineChartDataSet(values: yVals1, label: "X Values")
+        set1.circleRadius = 1.0
+        
+        var dataSets : [LineChartDataSet] = [LineChartDataSet]()
+        dataSets.append(set1)
+        
+        //4 - pass our months in for our x-axis label value along with our dataSets
+        let data: LineChartData = LineChartData(dataSets: dataSets)
+        
+        //5 - finally set our data
+        self.chartView.data = data
+    }
+    
+    func updateChart() {
+        chartView.data?.addEntry(ChartDataEntry(x: Double(countUp), y: xValue), dataSetIndex: 0)
+        chartView.setVisibleXRange(minXRange: 1, maxXRange: 50)
+        chartView.notifyDataSetChanged()
+        chartView.moveViewToX(Double(countUp))
+    }
+    
+    func convertToMinutes(val: Int) -> String {
+        return String(format: "%02d:%02d", val/60, val%60)
     }
 
 }
